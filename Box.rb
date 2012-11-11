@@ -41,7 +41,7 @@ class Box
   end
   
   def add(number, x, y)
-    if isLocationFree?(x,y)
+    if isLocationFree?(x,y) and not isPresent?(number)
       @list[x][y] = number
       @all[y * @dim + x] = number
       true
