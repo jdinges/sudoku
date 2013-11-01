@@ -3,3 +3,5 @@ The goal of this project is to create a sudoku game solver.
 Ideally, I'll start small, probably creating nothing more than a couple of classes to simulate a game. Then, after I've managed to leverage a working game, I'll implement a solver.
 
 Once I have a soduku solver, who knows what it will grow into...?
+
+One year later, here I am trying this
