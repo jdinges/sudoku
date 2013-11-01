@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
 
-require 'Sudoku'
+require './Sudoku.rb'
 
 # create the game

@@ -10,27 +10,28 @@ class Box
     @dim = num_range
     @size = num_range * num_range
     @list = Array.new(@dim)
-    for i 1..@dim
+    for i in 1..@dim do
       @list[i] = Array.new(@dim) { 0 }
     end
     @all = Array.new(@size) { 0 }
   end
   
-  def validLocation?(x, y)
+  def valid_location?(x, y)
     if x > 0 and x < @dim and 
        y > 0 and y < @dim
       true
     else
       false
+    end
   end
   
-  def isPresent?(x)
+  def is_present?(x)
     @all.include?
   end
   
-  def isLocationFree?(x, y)
-    unless validLocation(x,y)
-      puts "Box: isLocationFree? - location x: #{x}, y: #{y} isn't valid"
+  def is_location_free?(x, y)
+    unless valid_location(x,y)
+      puts "Box: is_location_free? - location x: #{x}, y: #{y} isn't valid"
       false
     end
     if not @list[x][y]
@@ -41,7 +42,7 @@ class Box
   end
   
   def add(number, x, y)
-    if isLocationFree?(x,y) and not isPresent?(number)
+    if is_location_free?(x,y) and not is_present?(number)
       @list[x][y] = number
       @all[y * @dim + x] = number
       true
@@ -49,5 +50,4 @@ class Box
       false
     end
   end
-    
 end
